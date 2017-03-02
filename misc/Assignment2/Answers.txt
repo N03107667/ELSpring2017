@@ -1,0 +1,359 @@
+Script started on Thu 16 Feb 2017 10:25:16 AM EST pi@raspberrypi:~$ sudo
+ifconfig eth0 Link encap:Ethernet HWaddr b8:27:eb:be:1a:81
+          inet6 addr: fe80::a6fa:b177:7add:ecf1/64 Scope:Link
+          UP BROADCAST MULTICAST MTU:1500 Metric:1                              
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
+
+lo Link encap:Local Loopback
+          inet addr:127.0.0.1 Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING MTU:65536 Metric:1                                
+          RX packets:192 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:192 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1
+          RX bytes:15552 (15.1 KiB)  TX bytes:15552 (15.1 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr b8:27:eb:eb:4f:d4
+          inet6 addr: fe80::8409:a553:68e8:5ec6/64 Scope:Link
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:68 errors:0 dropped:7 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:26304 (25.6 KiB)  TX bytes:0 (0.0 B)
+
+pi@raspberrypi:~$ sudo df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        30G  3.8G   25G  14% /
+devtmpfs        459M     0  459M   0% /dev
+tmpfs           463M     0  463M   0% /dev/shm
+tmpfs           463M  6.3M  457M   2% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           463M     0  463M   0% /sys/fs/cgroup
+/dev/mmcblk0p1   63M   21M   42M  33% /boot
+tmpfs            93M     0   93M   0% /run/user/1000
+pi@raspberrypi:~$ sudo du -sk !^H^[[K`^H^[[K~/
+16636   /home/pi/
+pi@raspberrypi:~$ sudo du -sh ~/^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[$
+  PID TTY          TIME CMD
+  781 pts/0    00:00:00 sudo
+  785 pts/0    00:00:00 ps
+pi@raspberrypi:~$ sudo ps xa
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss     0:02 /sbin/init splash
+    2 ?        S      0:00 [kthreadd]
+    3 ?        S      0:00 [ksoftirqd/0]
+    4 ?        S      0:00 [kworker/0:0]
+    5 ?        S<     0:00 [kworker/0:0H]
+    6 ?        S      0:00 [kworker/u8:0]
+    7 ?        S      0:00 [rcu_sched]
+    8 ?        S      0:00 [rcu_bh]
+    9 ?        S      0:00 [migration/0]
+   10 ?        S      0:00 [migration/1]
+   11 ?        S      0:00 [ksoftirqd/1]
+   12 ?        S      0:00 [kworker/1:0]
+   13 ?        S<     0:00 [kworker/1:0H]
+   14 ?        S      0:00 [migration/2]
+   15 ?        S      0:00 [ksoftirqd/2]
+   16 ?        S      0:00 [kworker/2:0]
+   17 ?        S<     0:00 [kworker/2:0H]
+   18 ?        S      0:00 [migration/3]
+   19 ?        S      0:00 [ksoftirqd/3]
+   20 ?        S      0:00 [kworker/3:0]
+   21 ?        S<     0:00 [kworker/3:0H]
+   22 ?        S      0:00 [kdevtmpfs]
+   23 ?        S<     0:00 [netns]
+   24 ?        S<     0:00 [perf]
+   25 ?        S      0:00 [khungtaskd]
+   26 ?        S<     0:00 [writeback]
+   27 ?        S<     0:00 [crypto]
+   28 ?        S<     0:00 [bioset]
+   29 ?        S<     0:00 [kblockd]
+   30 ?        S      0:00 [kworker/0:1]
+   31 ?        S<     0:00 [rpciod]
+   32 ?        S      0:00 [kswapd0]
+   33 ?        S<     0:00 [vmstat]
+   34 ?        S      0:00 [fsnotify_mark]
+   35 ?        S<     0:00 [nfsiod]
+   44 ?        S<     0:00 [kthrotld]
+   45 ?        S<     0:00 [bioset]
+   46 ?        S<     0:00 [bioset]
+   47 ?        S<     0:00 [bioset]
+   48 ?        S<     0:00 [bioset]
+   49 ?        S<     0:00 [bioset]
+   50 ?        S<     0:00 [bioset]
+   51 ?        S<     0:00 [bioset]
+   52 ?        S<     0:00 [bioset]
+   53 ?        S<     0:00 [bioset]
+   54 ?        S<     0:00 [bioset]
+   55 ?        S<     0:00 [bioset]
+   56 ?        S<     0:00 [bioset]
+   57 ?        S<     0:00 [bioset]
+   58 ?        S<     0:00 [bioset]
+   59 ?        S<     0:00 [bioset]
+   60 ?        S<     0:00 [bioset]
+   61 ?        S<     0:00 [bioset]
+   62 ?        S<     0:00 [bioset]
+   63 ?        S<     0:00 [bioset]
+   64 ?        S<     0:00 [bioset]
+   65 ?        S<     0:00 [bioset]
+   66 ?        S<     0:00 [bioset]
+   67 ?        S<     0:00 [bioset]
+   68 ?        S<     0:00 [bioset]
+   69 ?        S<     0:00 [VCHIQ-0]
+   70 ?        S<     0:00 [VCHIQr-0]
+   71 ?        S<     0:00 [VCHIQs-0]
+   72 ?        S<     0:00 [iscsi_eh]
+ 73 ?        S<     0:00 [dwc_otg]
+   74 ?        S      0:00 [kworker/1:1]
+   75 ?        S<     0:00 [DWC Notificatio]
+   76 ?        S      0:00 [kworker/u8:1]
+   77 ?        S      0:00 [irq/92-mmc1]
+   78 ?        S<     0:00 [bioset]
+   79 ?        S      0:00 [mmcqd/0]
+   80 ?        S      0:00 [VCHIQka-0]
+   81 ?        S<     0:00 [SMIO]
+   82 ?        S<     0:00 [deferwq]
+   83 ?        S      0:00 [kworker/u8:2]
+   84 ?        S      0:00 [kworker/2:1]
+   85 ?        S      0:00 [kworker/1:2]
+   86 ?        S      0:00 [jbd2/mmcblk0p2-]
+   87 ?        S<     0:00 [ext4-rsv-conver]
+   88 ?        S      0:00 [kworker/3:1]
+   89 ?        S<     0:00 [ipv6_addrconf]
+  106 ?        S<     0:00 [kworker/0:1H]
+  113 ?        S      0:00 [kworker/0:2]
+  131 ?        Ss     0:00 /lib/systemd/systemd-journald
+137 ?        Ss     0:00 /lib/systemd/systemd-udevd
+  183 ?        S      0:18 [w1_bus_master1]
+  210 ?        S      0:00 [kworker/3:2]
+  213 ?        S<     0:00 [cfg80211]
+  218 ?        S<     0:00 [brcmf_wq/mmc1:0]
+  220 ?        S      0:00 [brcmf_wdog/mmc1]
+  238 ?        S      0:00 [kworker/2:2]
+  298 ?        S      0:00 [kworker/2:3]
+  383 ?        Ss     0:00 /sbin/wpa_supplicant -s -B -P /run/wpa_supplicant.wla
+  403 ?        S<     0:00 [kworker/3:1H]
+  444 ?        Ss     0:00 dhclient -v -pf /run/dhclient.wlan0.pid -lf /var/lib/
+  485 ?        Ssl    0:00 /usr/sbin/rsyslogd -n
+  486 ?        Ss     0:00 /usr/sbin/cron -f
+  488 ?        Ss     0:00 avahi-daemon: running [raspberrypi.local]
+  495 ?        Ss     0:00 /usr/bin/dbus-daemon --system --address=systemd: --no
+  502 ?        Ss     0:00 /sbin/dhcpcd -q -b
+  504 ?        S      0:00 avahi-daemon: chroot helper
+  571 ?        Ss     0:00 /lib/systemd/systemd-logind
+  586 ?        Ss     0:00 /usr/sbin/sshd -D
+  612 ?        Ss     0:00 /usr/sbin/thd --daemon --triggers /etc/triggerhappy/t
+617 ?        Ss     0:00 /usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf
+  632 ?        S      0:00 [kworker/3:3]
+  637 tty1     Ss+    0:00 /sbin/agetty --noclear tty1 linux
+  638 ttyS0    Ss     0:00 /bin/login --
+  641 ?        Ss     0:00 /usr/sbin/gpm -m /dev/input/mice -t exps2
+  642 ?        Ss     0:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 106:111
+  645 ?        S      0:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 106:111
+  653 ?        S<     0:00 [kworker/u9:0]
+  654 ?        S<     0:00 [hci0]
+  655 ?        S<     0:00 [hci0]
+  656 ?        S<     0:00 [kworker/u9:1]
+  657 ?        S<     0:00 [kworker/u9:2]
+  658 ?        S      0:00 /usr/bin/hciattach /dev/serial1 bcm43xx 921600 noflow
+  663 ?        Ss     0:00 /usr/lib/bluetooth/bluetoothd
+  682 ?        S<     0:00 [kworker/1:1H]
+  691 ?        Ss     0:00 /lib/systemd/systemd --user
+  697 ?        S      0:00 (sd-pam)
+  702 ttyS0    S      0:00 -bash
+  741 ttyS0    S+     0:00 script outputfile.txt
+ 742 ttyS0    S+     0:00 script outputfile.txt
+  743 pts/0    Ss     0:00 bash -i
+  789 pts/0    S+     0:00 sudo ps xa
+  793 pts/0    R+     0:00 ps xa
+pi@raspberrypi:~$ sudo date
+Thu Feb 16 10:26:10 EST 2017
+pi@raspberrypi:~$ sudo who
+pi       ttyS0        2017-02-16 10:24
+pi@raspberrypi:~$ sudo whoami
+root
+pi@raspberrypi:~$ sudo which python
+/usr/bin/python
+pi@raspberrypi:~$ sudo which nano
+/usr/bin/nano
+pi@raspberrypi:~$ suc^H^[[Kdo ls /sbin
+agetty           fsck.vfat          lsmod             resize2fs
+badblocks        fsfreeze           MAKEDEV           resolvconf
+blkdiscard       fstab-decode       mii-tool          rmmod
+blkid            fstrim             mkdosfs           route
+blockdev         getcap             mke2fs            rpcbind
+bridge           getpcaps           mkfs              rpc.statd
+capsh            getty              mkfs.bfs          rtacct
+cfdisk           halt               mkfs.cramfs       rtmon
+chcpu            hwclock            mkfs.ext2         runlevel
+crda             ifconfig           mkfs.ext3         runuser
+ctrlaltdel       ifdown             mkfs.ext4         setcap
+debugfs          ifquery            mkfs.ext4dev      sfdisk
+depmod           ifup               mkfs.fat          shadowconfig
+dhclient         init               mkfs.minix        showmount
+dhclient-script  insmod             mkfs.msdos        shutdown
+dhcpcd           insserv            mkfs.vfat         slattach
+dhcpcd5          installkernel      mkhomedir_helper  sm-notify
+dmsetup          ip                 mkswap            start-stop-daemon
+dosfsck          ip6tables          mntctl            sulogin
+dosfslabel       ip6tables-restore  modinfo           swaplabel
+dphys-swapfile   ip6tables-save     modprobe          swapoff
+dumpe2fs         ipmaddr            mountall          swapon
+e2fsck           iptables           mount.cifs        switch_root
+e2image          iptables-restore   mount.fuse        sysctl
+e2label          iptables-save      mount.nfs         tc
+e2undo           iptunnel           mount.nfs4        telinit
+fake-hwclock     isosize            nameif            tune2fs
+fatlabel         iw                 osd_login         udevadm
+fdisk            iwconfig           pam_tally         udevd
+findfs           iwevent            pam_tally2        umount.nfs
+fsck             iwgetid            parted            umount.nfs4
+fsck.cramfs      iwlist             partprobe         umount.udisks2
+fsck.ext2        iwpriv             pivot_root        unix_chkpwd
+fsck.ext3        iwspy              plipconfig        unix_update
+fsck.ext4        kbdrate            plymouthd         wipefs
+fsck.ext4dev     killall5           poweroff          wpa_action
+fsck.fat         ldconfig           rarp              wpa_cli
+fsck.minix       ldconfig.real      raw               wpa_supplicant
+fsck.msdos       logsave            reboot            xtables-multi
+fsck.nfs         losetup            regdbdump
+pi@raspberrypi:~$ sudo lsmod
+Module                  Size  Used by
+bnep                   10340  2
+hci_uart               17943  1
+btbcm                   5929  1 hci_uart
+bluetooth             326105  22 bnep,btbcm,hci_uart
+brcmfmac              186403  0
+brcmutil                5661  1 brcmfmac
+cfg80211              428431  1 brcmfmac
+rfkill                 16037  4 cfg80211,bluetooth
+snd_bcm2835            20447  0
+snd_pcm                75762  1 snd_bcm2835
+snd_timer              19288  1 snd_pcm
+snd                    51908  3 snd_bcm2835,snd_timer,snd_pcm
+bcm2835_gpiomem         3040  0
+i2c_bcm2708             4834  0
+bcm2835_wdt             3225  0
+w1_gpio                 3657  0
+wire                   25219  1 w1_gpio
+cn                      4374  1 wire
+uio_pdrv_genirq         3164  0
+uio                     8000  1 uio_pdrv_genirq
+i2c_dev                 5859  0
+fuse                   84037  1
+ipv6                  347594  30
+pi@raspberrypi:~$ sudo which nano^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[$
+Module                  Size  Used by
+bnep                   10340  2
+hci_uart               17943  1
+btbcm                   5929  1 hci_uart
+bluetooth             326105  22 bnep,btbcm,hci_uart
+brcmfmac              186403  0
+brcmutil                5661  1 brcmfmac
+cfg80211              428431  1 brcmfmac
+rfkill                 16037  4 cfg80211,bluetooth
+snd_bcm2835            20447  0
+snd_pcm                75762  1 snd_bcm2835
+snd_timer              19288  1 snd_pcm
+snd                    51908  3 snd_bcm2835,snd_timer,snd_pcm
+bcm2835_gpiomem         3040  0
+i2c_bcm2708             4834  0
+bcm2835_wdt             3225  0
+w1_gpio                 3657  0
+wire                   25219  1 w1_gpio
+cn                      4374  1 wire
+uio_pdrv_genirq         3164  0
+uio                     8000  1 uio_pdrv_genirq
+i2c_dev                 5859  0
+fuse                   84037  1
+ipv6                  347594  30
+pi@raspberrypi:~$ sudo which mount
+/bin/mount
+pi@raspberrypi:~$ sudo mount
+/dev/mmcblk0p2 on / type ext4 (rw,noatime,data=ordered)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=469528k,nr_inodes=117382,mode=$
+ysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmo$
+tmpfs on /run type tmpfs (rw,nosuid,nodev,mode=755)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,x$
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relati$
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blk$
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,me$
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,d$
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,f$
+cgroup on /sys/fs/cgroup/net_cls type cgroup (rw,nosuid,nodev,noexec,relatime,n$
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=22,pgrp=1,tim$
+mqueue on /dev/mqueue type mqueue (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+configfs on /sys/kernel/config type configfs (rw,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+/dev/mmcblk0p1 on /boot type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=4$
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=94776k,mode=7$
+pi@raspberrypi:~$ sudo which sqlite
+/usr/bin/sqlite
+pi@raspberrypi:~$ sudo which sqlite3
+/usr/bin/sqlite3
+pi@raspberrypi:~$ sudo apt-get install sqlite3
+^MReading package lists... 0%^M^MReading package lists... 100%^M^MReading packa$
+^MBuilding dependency tree... 0%^M^MBuilding dependency tree... 0%^M^MBuilding $
+^MReading state information... 0%^M^MReading state information... 0%^M^MReading$
+sqlite3 is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+pi@raspberrypi:~$ sudo which sqlite3
+/usr/bin/sqlite3
+pi@raspberrypi:~$ sudo dpkg -l >installed_packages.txt
+pi@raspberrypi:~$ sudo tail -;^H^[[Kl installed_pak^H^[[Kckages.txt^H^H^H^H^H^H$
+ii  xserver-xorg-input-all                1:7.7+7+b1                           $
+ii  xserver-xorg-input-evdev              1:2.10.3-1                           $
+ii  xserver-xorg-input-synaptics          1.8.3-2                              $
+ii  xserver-xorg-video-fbdev              1:0.4.4-1+rpi2                       $
+ii  xserver-xorg-video-fbturbo            1.20161111~122359                    $
+ii  xz-utils                              5.1.1alpha+20120614-2                $
+ii  zenity                                3.14.0-1                             $
+ii  zenity-common                         3.14.0-1                             $
+ii  zlib1g:armhf                          1:1.2.8.dfsg-2                       $
+ii  zlib1g-dev:armhf                      1:1.2.8.dfsg-2                       $
+pi@raspberrypi:~$ sudo wx^H^[[Kc -l installed+_^H^[[K^H^[[K_ap^H^[[K^H^[[Kpacka$
+1215 installed_packages.txt
+pi@raspberrypi:~$ sudo i^H^[[Kfind / -ina^H^[[Kame 'syslog*;^H^[[K'
+/etc/systemd/system/syslog.service
+pi@raspberrypi:~$ sudo find / -iname 'syslog*' 2>/dev/null
+/etc/systemd/system/syslog.service
+/lib/systemd/system/syslog.socket
+/var/log/syslog
+/var/lib/systemd/deb-systemd-helper-enabled/syslog.service
+/usr/include/arm-linux-gnueabihf/bits/syslog-ldbl.h
+/usr/include/arm-linux-gnueabihf/bits/syslog-path.h
+/usr/include/arm-linux-gnueabihf/bits/syslog.h
+/usr/include/arm-linux-gnueabihf/sys/syslog.h
+/usr/include/syslog.h
+/usr/share/man/man3/syslog.3.gz
+/usr/share/man/man2/syslog.2.gz
+/usr/share/doc/libruby1.9.1/syslog
+/usr/share/doc/libruby1.9.1/syslog/syslog.txt
+/usr/share/ri/1.9.1/system/Syslog
+/usr/lib/pypy/lib_pypy/syslog.py
+/usr/lib/pypy/lib_pypy/__pycache__/syslog.pypy-26.pyc
+/usr/lib/arm-linux-gnueabihf/ruby/2.1.0/syslog.so
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/Sys/Syslog.pm
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/bits/syslog-ldbl.ph
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/bits/syslog.ph
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/bits/syslog-path.ph
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/syslog.ph
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/auto/Sys/Syslog
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/auto/Sys/Syslog/Syslog.so
+/usr/lib/arm-linux-gnueabihf/perl/5.20.2/sys/syslog.ph
+/usr/lib/ruby/1.9.1/arm-linux-eabihf/syslog.so
+/usr/lib/ruby/2.1.0/syslog
+/run/systemd/journal/syslog
+pi@raspberrypi:~$ exit
+
+Script done on Thu 16 Feb 2017 10:31:02 AM EST
+
